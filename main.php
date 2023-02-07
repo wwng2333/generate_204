@@ -10,8 +10,9 @@ $http_worker->count = 1;
 $http_worker->name = 'generate_204';
 $http_worker->onMessage = function(TcpConnection $connection, Request $request)
 {
-    $connection->send(new Response(204, [
-        'X-Powered-by' => 'github.com/wwng2333/generate_204'
+    $connection->close(new Response(204, [
+        'X-Powered-by' => 'github.com/wwng2333/generate_204',
+        'Connection' => 'close'
     ], ''));
 };
 
