@@ -22,11 +22,11 @@ php main.php start -d
 < HTTP/1.1 204 No Content
 < Server: workerman
 < X-Powered-by: github.com/wwng2333/generate_204
-< Connection: keep-alive
+< Connection: close
 < Content-Type: text/html;charset=utf-8
 < Content-Length: 0
 < 
-* Connection #0 to host 100.77.158.125 left intact
+* Closing connection 0
 ```
 # Benchmark
 ```bash
