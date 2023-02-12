@@ -8,6 +8,14 @@ cd generate_204
 composer install
 php main.php start -d
 ```
+# install on Alpine Linux 3.18
+```bash
+apk add git composer php81-cli php81-posix php81-pcntl
+git clone https://github.com/wwng2333/generate_204.git
+cd generate_204
+composer install
+php main.php start -d
+```
 # Test
 ```bash
 [root@localhost ~]# curl -v 100.77.158.125:2333
