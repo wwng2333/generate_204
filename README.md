@@ -38,7 +38,7 @@ php main.php start -d
 ```
 # Benchmark
 ```bash
-[root@nas generate_204]# ab -c1000 -n100000 http://127.0.0.1:2333/generate_204
+[root@crazy generate_204]# ab -n 100000 -c 1000 http://127.0.0.1:2333/
 This is ApacheBench, Version 2.3 <$Revision: 1903618 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
@@ -61,35 +61,35 @@ Server Software:        workerman
 Server Hostname:        127.0.0.1
 Server Port:            2333
 
-Document Path:          /generate_204
+Document Path:          /
 Document Length:        0 bytes
 
 Concurrency Level:      1000
-Time taken for tests:   10.332 seconds
+Time taken for tests:   7.554 seconds
 Complete requests:      100000
 Failed requests:        0
 Total transferred:      17100000 bytes
 HTML transferred:       0 bytes
-Requests per second:    9679.06 [#/sec] (mean)
-Time per request:       103.316 [ms] (mean)
-Time per request:       0.103 [ms] (mean, across all concurrent requests)
-Transfer rate:          1616.33 [Kbytes/sec] received
+Requests per second:    13237.97 [#/sec] (mean)
+Time per request:       75.540 [ms] (mean)
+Time per request:       0.076 [ms] (mean, across all concurrent requests)
+Transfer rate:          2210.64 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0   51  17.1     51      85
-Processing:    20   52  17.3     51      88
-Waiting:        2   26  18.2     18      83
-Total:         43  103   4.4    103     111
+Connect:        0   32   4.2     32      52
+Processing:    12   43   6.6     42      67
+Waiting:        1   32   7.8     28      52
+Total:         46   75   4.1     75     101
 
 Percentage of the requests served within a certain time (ms)
-  50%    103
-  66%    105
-  75%    105
-  80%    106
-  90%    106
-  95%    107
-  98%    108
-  99%    108
- 100%    111 (longest request)
+  50%     75
+  66%     77
+  75%     78
+  80%     78
+  90%     79
+  95%     80
+  98%     86
+  99%     88
+ 100%    101 (longest request)
 ```
